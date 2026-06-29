@@ -1,18 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cirrus Training Planner</title>
-  <link rel="icon" type="image/png" href="cirrus-favicon.png">
-  <style>
-    html, body { margin: 0; height: 100%; background: #F2F2F7; }
-    iframe { border: 0; display: block; width: 100%; height: 100%; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Cirrus Training Planner</title>
+<link rel="icon" href="/training-aiden/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/training-aiden/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/training-aiden/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/training-aiden/apple-touch-icon.png">
+
+<!-- Open Graph / Slack / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cirrus">
+<meta property="og:title" content="Cirrus Training Planner">
+<meta property="og:description" content="Plan and book your Cirrus training sessions. Pick a time that suits your team and your invite is sent the moment you confirm.">
+<meta property="og:image" content="https://cirrus-assessment.github.io/training-aiden/og.png?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://cirrus-assessment.github.io/training-aiden/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cirrus Training Planner">
+<meta name="twitter:description" content="Plan and book your Cirrus training sessions. Pick a time that suits your team and your invite is sent the moment you confirm.">
+<meta name="twitter:image" content="https://cirrus-assessment.github.io/training-aiden/og.png?v=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F4F4F0;--ink:#1A1B1F;--muted:#5A5C66;--aubergine:#464361;--aub-lt:#54506F;--orange:#E76A25}
+  html{color-scheme:light}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,system-ui,"Segoe UI",sans-serif;display:flex;align-items:center;justify-content:center;padding:28px;box-sizing:border-box}
+  .wrap{width:100%;max-width:560px;text-align:center}
+  .lockup{display:inline-flex;align-items:center;gap:18px}
+  .tile{width:74px;height:74px;border-radius:19px;background:linear-gradient(135deg,var(--aub-lt) 0%,var(--aubergine) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(70,67,97,.28);flex-shrink:0}
+  .tile img{width:46px;height:46px;display:block}
+  .word{font-family:Poppins,system-ui,sans-serif;font-weight:600;font-size:40px;letter-spacing:-.5px;color:var(--aubergine);line-height:1}
+  .word em{font-style:normal;font-weight:300;color:var(--orange)}
+  .load{margin-top:40px;display:flex;align-items:center;gap:12px;justify-content:center}
+  .spinner{width:20px;height:20px;border:2px solid rgba(231,106,37,.25);border-top-color:var(--orange);border-radius:50%;animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .msg{font-size:15px;color:var(--muted)}
+  .fallback{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.5}
+  .fallback a{color:var(--orange);text-decoration:none;font-weight:600}
+  .fallback a:hover{text-decoration:underline}
+  @media (prefers-reduced-motion:reduce){.spinner{animation:none}}
+</style>
 </head>
 <body>
-  <iframe
-    src="https://script.google.com/macros/s/AKfycbys8bnaNqTQXtJ8Trr6jOjFaJim5qp9ZYlO4gTTFkBG_kgmTy0GtW_OZQ38Sv5kOwFygQ/exec"
-    title="Cirrus Training Planner"></iframe>
+  <div class="wrap">
+    <div class="lockup">
+      <span class="tile"><img alt="" src="/training-aiden/mark.png"></span>
+      <span class="word">Cirrus <em>Training</em></span>
+    </div>
+    <div class="load"><span class="spinner" aria-hidden="true"></span><span class="msg">Opening the training planner&hellip;</span></div>
+    <p class="fallback">Not redirected? <a href="https://script.google.com/macros/s/AKfycbys8bnaNqTQXtJ8Trr6jOjFaJim5qp9ZYlO4gTTFkBG_kgmTy0GtW_OZQ38Sv5kOwFygQ/exec">Open the planner</a>.</p>
+  </div>
+  <script>
+    location.replace("https://script.google.com/macros/s/AKfycbys8bnaNqTQXtJ8Trr6jOjFaJim5qp9ZYlO4gTTFkBG_kgmTy0GtW_OZQ38Sv5kOwFygQ/exec");
+  </script>
 </body>
 </html>
